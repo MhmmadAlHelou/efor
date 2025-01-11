@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "726561898777",
+    "project_id": "efor-e81af",
+    "storage_bucket": "efor-e81af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726561898777:android:6a7385a027b708591d0588",
+        "android_client_info": {
+          "package_name": "com.example.efor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXH9jJ3k6u0mwENNTDdGLFFyYASDLbJJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
