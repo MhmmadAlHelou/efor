@@ -20,6 +20,6 @@ class MyServices extends GetxService {
   }
 }
 
-initialServices() async {
+dynamic initialServices() async {
   await Get.putAsync(() => MyServices().init());
 }

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class HomeScreenContoller extends GetxController {
-  changePage(int i);
+  dynamic changePage(int i);
 }
 
 class HomeScreenContollerImp extends HomeScreenContoller {

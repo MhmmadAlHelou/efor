@@ -5,9 +5,9 @@ import 'package:efor/data/data_sourse/remote/auth/verfiycode_signup.dart';
 import 'package:get/get.dart';
 
 abstract class VerifyCodeSignUpController extends GetxController {
-  checkCode();
-  reSend();
-  goToSeccessSignUp(String verificationCode);
+  dynamic checkCode();
+  dynamic reSend();
+  dynamic goToSeccessSignUp(String verificationCode);
 }
 
 class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {

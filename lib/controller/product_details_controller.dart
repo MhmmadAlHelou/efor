@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class ProductDetailsController extends GetxController {
-  intialData();
-  addItems(int itemsId);
-  deleteItems(int itemsId);
-  getCountItems(int itemsId);
-  add();
-  remove();
+  dynamic intialData();
+  dynamic addItems(int itemsId);
+  dynamic deleteItems(int itemsId);
+  dynamic getCountItems(int itemsId);
+  dynamic add();
+  dynamic remove();
 }
 
 class ProductDetailsControllerImp extends ProductDetailsController {

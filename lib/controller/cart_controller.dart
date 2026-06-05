@@ -28,7 +28,7 @@ class CartController extends GetxController {
   double priceOrders = 0;
   int totalCountItems = 0;
 
-  add(int itemsId) async {
+  dynamic add(int itemsId) async {
     // if (countItems < data.itemsCount!)
     statusRequest = StatusRequest.loading;
     update();
@@ -47,7 +47,7 @@ class CartController extends GetxController {
     update();
   }
 
-  delete(int itemsId) async {
+  dynamic delete(int itemsId) async {
     statusRequest = StatusRequest.loading;
     update();
     var response = await cartData.deleteCart(
@@ -64,18 +64,18 @@ class CartController extends GetxController {
     update();
   }
 
-  resetVarCart() {
+  void resetVarCart() {
     priceOrders = 0;
     totalCountItems = 0;
     data.clear();
   }
 
-  refreshPage() {
+  void refreshPage() {
     resetVarCart();
     view();
   }
 
-  view() async {
+  dynamic view() async {
     statusRequest = StatusRequest.loading;
     update();
     var response =
@@ -104,11 +104,11 @@ class CartController extends GetxController {
     update();
   }
 
-  getTotalPrice() {
+  double getTotalPrice() {
     return priceOrders - priceOrders * couponDiscount / 100;
   }
 
-  checkCoupon() async {
+  dynamic checkCoupon() async {
     statusRequest = StatusRequest.loading;
     update();
     var response = await cartData.checkCoupon(controllerCoupon!.text);
@@ -131,7 +131,7 @@ class CartController extends GetxController {
     update();
   }
 
-  goToPageCheckout() {
+  void goToPageCheckout() {
     if (data.isEmpty) {
       Get.snackbar('Warning', 'The Cart is empty');
     } else {

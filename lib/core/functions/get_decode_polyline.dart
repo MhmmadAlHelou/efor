@@ -5,12 +5,13 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 
-Future getPolyline(lat, long, destLat, detsLong) async {
+dynamic getPolyline(
+    dynamic lat, dynamic long, dynamic destLat, dynamic detsLong) async {
   String url =
       "https://maps.gomaps.pro/maps/api/directions/json?origin=$lat,$long&destination=$destLat,$detsLong&key=AlzaSylCdinS03Z9UVoHZS9uGa-KIv7MxaKEo6e";
 
   List<LatLng> polylineCo = [];
-  PolylinePoints polylinePoints = PolylinePoints();
+  // PolylinePoints polylinePoints = PolylinePoints();
   Set<Polyline> polylineSet = {};
 
   var response = await http.get(Uri.parse(url));
@@ -18,7 +19,8 @@ Future getPolyline(lat, long, destLat, detsLong) async {
   var responseBody = jsonDecode(response.body);
   var point = responseBody['routes'][0]['overview_polyline']['points'];
 
-  List<PointLatLng> result = polylinePoints.decodePolyline(point);
+  List<PointLatLng> result = PolylinePoints.decodePolyline(point);
+  // List<PointLatLng> result = polylinePoints.decodePolyline(point);
 
   if (result.isNotEmpty) {
     result.forEach((PointLatLng pointLatLng) {

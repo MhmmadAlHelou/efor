@@ -44,7 +44,7 @@ class OrdersArchiveController extends GetxController {
     }
   }
 
-  getOrders() async {
+  dynamic getOrders() async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
@@ -63,11 +63,11 @@ class OrdersArchiveController extends GetxController {
     update();
   }
 
-  refreshOrder() {
+  void refreshOrder() {
     getOrders();
   }
 
-  submitRating(String orderId, double rating, String comment) async {
+  dynamic submitRating(String orderId, double rating, String comment) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();

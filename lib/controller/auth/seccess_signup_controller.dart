@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../core/constant/routes.dart';
 
 abstract class SeccessSignUpController extends GetxController {
-  goToPageLogin();
+  dynamic goToPageLogin();
 }
 
 class SeccessSignUpControllerImp extends SeccessSignUpController {

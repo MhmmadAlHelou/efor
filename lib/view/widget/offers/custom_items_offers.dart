@@ -47,7 +47,7 @@ class CustomListItemsOffers extends GetView<OffersController> {
                         itemsModel.itemsName, itemsModel.itemsNameAr),
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                        color: AppColor.black,
+                        color: AppColor.white,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),

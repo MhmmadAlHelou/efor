@@ -9,10 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class HomeContoller extends SearchMixController {
-  initialData();
-  getData();
-  goToItems(List categories, int selectedCat, int categoryid);
-  goToProductDetails(ItemsModel itemsModel);
+  dynamic initialData();
+  dynamic getData();
+  dynamic goToItems(List categories, int selectedCat, int categoryid);
+  dynamic goToProductDetails(ItemsModel itemsModel);
 }
 
 class HomeControllerImp extends HomeContoller {
@@ -101,7 +101,7 @@ class SearchMixController extends GetxController {
 
   HomeData homeData = HomeData(Get.find());
 
-  checkSearch(val) {
+  dynamic checkSearch(dynamic val) {
     if (val == '') {
       statusRequest = StatusRequest.none;
       isSearch = false;
@@ -109,13 +109,13 @@ class SearchMixController extends GetxController {
     update();
   }
 
-  onSearchItems() {
+  dynamic onSearchItems() {
     isSearch = true;
     searchData();
     update();
   }
 
-  searchData() async {
+  dynamic searchData() async {
     statusRequest = StatusRequest.loading;
     var response = await homeData.searchData(search!.text);
     print("===================connn $response");

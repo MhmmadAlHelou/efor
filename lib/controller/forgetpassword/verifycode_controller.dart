@@ -5,9 +5,9 @@ import 'package:efor/data/data_sourse/remote/forgetpassword/verifycode.dart';
 import 'package:get/get.dart';
 
 abstract class VerifyCodeController extends GetxController {
-  checkCode();
-  reSend();
-  goToResetPassword(String verifycode);
+  dynamic checkCode();
+  dynamic reSend();
+  dynamic goToResetPassword(String verifycode);
 }
 
 class VerifyCodeControllerImp extends VerifyCodeController {

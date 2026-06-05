@@ -25,22 +25,22 @@ class CheckoutController extends GetxController {
   late String couponDiscount;
   late String priceOrder;
 
-  choosePaymentMethod(String val) {
+  void choosePaymentMethod(String val) {
     paymentMethod = val;
     update();
   }
 
-  chooseDeliveryType(String val) {
+  void chooseDeliveryType(String val) {
     deliveryType = val;
     update();
   }
 
-  chooseShoppingAddress(String val) {
+  void chooseShoppingAddress(String val) {
     addressId = val;
     update();
   }
 
-  getShippingAddress() async {
+  dynamic getShippingAddress() async {
     statusRequest = StatusRequest.loading;
     var response = await addressData
         .getData(myServices.sharedPreferences.getString('id')!);
@@ -58,7 +58,7 @@ class CheckoutController extends GetxController {
     update();
   }
 
-  checkout() async {
+  dynamic checkout() async {
     if (paymentMethod == null) {
       return Get.snackbar('Error', 'Please select a payment method');
     }

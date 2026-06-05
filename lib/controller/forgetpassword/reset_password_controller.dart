@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class ResetPasswordController extends GetxController {
-  resetpassword();
-  goToSuccessResetPassword();
+  dynamic resetpassword();
+  dynamic goToSuccessResetPassword();
 }
 
 class ResetPasswordControllerImp extends ResetPasswordController {

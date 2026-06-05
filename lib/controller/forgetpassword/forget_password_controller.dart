@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class ForgetPasswordController extends GetxController {
-  checkEmail();
+  dynamic checkEmail();
 }
 
 class ForgetPasswordControllerImp extends ForgetPasswordController {

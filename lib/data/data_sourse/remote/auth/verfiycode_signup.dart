@@ -5,7 +5,7 @@ class VerfiycodeSignUpData {
   Crud crud;
   VerfiycodeSignUpData(this.crud);
 
-  potData(String email, String verfiycode) async {
+  dynamic potData(String email, String verfiycode) async {
     var response = await crud.postData(AppLink.verfiycodeSignUp, {
       "email": email,
       "verfiycode": verfiycode,
@@ -13,7 +13,7 @@ class VerfiycodeSignUpData {
     return response.fold((l) => l, (r) => r);
   }
 
-  resendData(String email) async {
+  dynamic resendData(String email) async {
     var response = await crud.postData(AppLink.resnd, {"email": email});
     return response.fold((l) => l, (r) => r);
   }

@@ -23,7 +23,7 @@ class DeliveryOrdersDetailsController extends GetxController {
   List<CartModel> data = [];
   late StatusRequest statusRequest;
 
-  intialData() {
+  void intialData() {
     completerController = Completer<GoogleMapController>();
     if (ordersModel!.ordersType == 0) {
       cameraPosition = CameraPosition(
@@ -45,7 +45,7 @@ class DeliveryOrdersDetailsController extends GetxController {
     super.onInit();
   }
 
-  getData() async {
+  dynamic getData() async {
     statusRequest = StatusRequest.loading;
     var response =
         await ordersDetailsData.getData(ordersModel!.ordersId!.toString());

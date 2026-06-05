@@ -5,7 +5,8 @@ class SignUpData {
   Crud crud;
   SignUpData(this.crud);
 
-  potData(String username, String password, String email, String phone) async {
+  dynamic potData(
+      String username, String password, String email, String phone) async {
     var response = await crud.postData(AppLink.signup, {
       "username": username,
       "password": password,

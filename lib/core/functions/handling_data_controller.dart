@@ -1,6 +1,6 @@
 import 'package:efor/core/class/statusrequest.dart';
 
-handlingData(response) {
+StatusRequest handlingData(dynamic response) {
   if (response is StatusRequest) {
     return response;
   } else {

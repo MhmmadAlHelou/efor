@@ -38,7 +38,7 @@ class TrackingController extends GetxController {
 
   DileveryOrdersAcceptedController ordersAcceptedController = Get.find();
 
-  doneDelivery() async {
+  dynamic doneDelivery() async {
     statusRequest = StatusRequest.loading;
     update();
     await ordersAcceptedController.doneDelivery(
@@ -48,7 +48,7 @@ class TrackingController extends GetxController {
     Get.offAllNamed(AppRoutes.homePage);
   }
 
-  getCurrentLocation() {
+  void getCurrentLocation() {
     cameraPosition = CameraPosition(
       target: LatLng(ordersModel.addressLat!, ordersModel.addressLong!),
       zoom: 12.4746,
@@ -84,7 +84,7 @@ class TrackingController extends GetxController {
     });
   }
 
-  initPolyline() async {
+  dynamic initPolyline() async {
     deslat = ordersModel.addressLat;
     deslong = ordersModel.addressLong;
 
@@ -94,7 +94,7 @@ class TrackingController extends GetxController {
     update();
   }
 
-  refreshLocation() async {
+  dynamic refreshLocation() async {
     await Future.delayed(const Duration(seconds: 2));
 
     timer = Timer.periodic(

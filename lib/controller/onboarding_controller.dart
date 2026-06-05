@@ -6,8 +6,8 @@ import '../core/services/services.dart';
 import '../data/data_sourse/static/static.dart';
 
 abstract class OnBoardingController extends GetxController {
-  next();
-  onPageChanged(int index);
+  dynamic next();
+  dynamic onPageChanged(int index);
 }
 
 class OnBoardingControllerImp extends OnBoardingController {

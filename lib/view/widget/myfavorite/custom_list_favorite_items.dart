@@ -45,7 +45,7 @@ class CustomListFavoriteItems extends GetView<MyFavoriteContoller> {
                   myFavoriteModel.itemsName, myFavoriteModel.itemsNameAr),
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  color: AppColor.black,
+                  color: AppColor.white,
                   fontSize: 16,
                   fontWeight: FontWeight.bold),
             ),

@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class LoginController extends GetxController {
-  login();
-  goToSignUp();
-  goToForgetPassword();
+  dynamic login();
+  dynamic goToSignUp();
+  dynamic goToForgetPassword();
 }
 
 class LoginControllerImp extends LoginController {
@@ -27,7 +27,7 @@ class LoginControllerImp extends LoginController {
 
   StatusRequest statusRequest = StatusRequest.none;
 
-  showPassword() {
+  void showPassword() {
     isShowPassword = isShowPassword == true ? false : true;
     update();
   }

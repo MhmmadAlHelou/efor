@@ -13,7 +13,7 @@ class MyFavoriteContoller extends GetxController {
   List<MyFavoriteModel> data = [];
   late StatusRequest statusRequest;
 
-  getData() async {
+  dynamic getData() async {
     data.clear();
     statusRequest = StatusRequest.loading;
     var response = await favoriteData
@@ -33,7 +33,7 @@ class MyFavoriteContoller extends GetxController {
     update();
   }
 
-  deleteFromFavorite(int favoriteId) {
+  dynamic deleteFromFavorite(int favoriteId) {
     favoriteData.deleteData(favoriteId);
     data.removeWhere((element) => element.favoriteId == favoriteId);
 
@@ -46,7 +46,7 @@ class MyFavoriteContoller extends GetxController {
     super.onInit();
   }
 
-  goTofavoriteProductDetails(MyFavoriteModel myFavoriteModel) {
+  dynamic goTofavoriteProductDetails(MyFavoriteModel myFavoriteModel) {
     Get.toNamed('vaforiteproductdetails',
         arguments: {'myFavoriteModel': myFavoriteModel});
   }

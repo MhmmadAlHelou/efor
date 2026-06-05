@@ -20,7 +20,7 @@ class AddAddressDetailsController extends GetxController {
 
   MyServices myServices = Get.find();
 
-  addAddress() async {
+  dynamic addAddress() async {
     statusRequest = StatusRequest.loading;
     update();
     var response = await addressData.addData(
@@ -30,7 +30,7 @@ class AddAddressDetailsController extends GetxController {
         street!.text,
         lat!,
         long!);
-    print("===================connn $response");
+    // print("===================connn $response");
     statusRequest = handlingData(response);
     if (statusRequest == StatusRequest.success) {
       if (response['status'] == 'success') {
@@ -43,7 +43,7 @@ class AddAddressDetailsController extends GetxController {
     update();
   }
 
-  initialData() {
+  void initialData() {
     name = TextEditingController();
     city = TextEditingController();
     street = TextEditingController();

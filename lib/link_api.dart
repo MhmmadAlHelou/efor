@@ -1,5 +1,5 @@
 class AppLink {
-  static const String server = "http://192.168.1.107/efor";
+  static const String server = "http://192.168.1.106/efor";
   static const String imageStatic = "$server/upload";
 
   static const String test = "$server/test.php";

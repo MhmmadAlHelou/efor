@@ -19,7 +19,7 @@ class AddAddressController extends GetxController {
   double lat = 0.0;
   double long = 0.0;
 
-  addMarkers(LatLng latLng) {
+  void addMarkers(LatLng latLng) {
     markers.clear();
     markers.add(Marker(markerId: const MarkerId('1'), position: latLng));
     lat = latLng.latitude;
@@ -27,7 +27,7 @@ class AddAddressController extends GetxController {
     update();
   }
 
-  goToPageAddDetailsAddress() {
+  void goToPageAddDetailsAddress() {
     Get.toNamed(
       AppRoutes.addressAddDetails,
       arguments: {
@@ -44,7 +44,7 @@ class AddAddressController extends GetxController {
     super.onInit();
   }
 
-  getCurrentPosition() async {
+  dynamic getCurrentPosition() async {
     position = await Geolocator.getCurrentPosition();
     kGooglePlex = CameraPosition(
       target: LatLng(position!.latitude, position!.longitude),

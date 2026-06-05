@@ -2,7 +2,7 @@ import 'package:efor/core/constant/routes.dart';
 import 'package:get/get.dart';
 
 abstract class SeccessResetPasswordController extends GetxController {
-  goToPageLogin();
+  dynamic goToPageLogin();
 }
 
 class SeccessResetPasswordControllerImp extends SeccessResetPasswordController {

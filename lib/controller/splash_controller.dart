@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../view/screen/language/language.dart';
 
 abstract class SplshController extends GetxController {
-  goToNextView();
+  dynamic goToNextView();
 }
 
 class SplshControllerImp extends SplshController {

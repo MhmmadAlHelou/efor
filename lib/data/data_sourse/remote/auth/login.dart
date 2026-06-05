@@ -5,7 +5,7 @@ class LoginData {
   Crud crud;
   LoginData(this.crud);
 
-  potData(String email, String password) async {
+  dynamic potData(String email, String password) async {
     var response = await crud.postData(AppLink.login, {
       "email": email,
       "password": password,

@@ -25,7 +25,7 @@ class OrdersDetailsController extends GetxController {
   List<CartModel> data = [];
   late StatusRequest statusRequest;
 
-  intialData() {
+  void intialData() {
     if (ordersModel!.ordersType == 0) {
       cameraPosition = CameraPosition(
         target: LatLng(ordersModel!.addressLat!, ordersModel!.addressLong!),
@@ -46,7 +46,7 @@ class OrdersDetailsController extends GetxController {
     super.onInit();
   }
 
-  getData() async {
+  dynamic getData() async {
     statusRequest = StatusRequest.loading;
     var response =
         await ordersDetailsData.getData(ordersModel!.ordersId!.toString());

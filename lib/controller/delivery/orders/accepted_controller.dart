@@ -45,7 +45,7 @@ class DileveryOrdersAcceptedController extends GetxController {
     }
   }
 
-  getOrders() async {
+  dynamic getOrders() async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
@@ -65,7 +65,7 @@ class DileveryOrdersAcceptedController extends GetxController {
     update();
   }
 
-  doneDelivery(String ordersid, String usersid) async {
+  dynamic doneDelivery(String ordersid, String usersid) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
@@ -82,7 +82,7 @@ class DileveryOrdersAcceptedController extends GetxController {
     update();
   }
 
-  refreshOrder() {
+  void refreshOrder() {
     getOrders();
   }
 

@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class SignUpController extends GetxController {
-  signUp();
-  goToSignIn();
+  dynamic signUp();
+  dynamic goToSignIn();
 }
 
 class SignUpControllerImp extends SignUpController {

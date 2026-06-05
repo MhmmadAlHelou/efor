@@ -2,7 +2,7 @@ import 'package:efor/data/model/myfavorite.dart';
 import 'package:get/get.dart';
 
 abstract class FavoriteProductDetailsController extends GetxController {
-  intialData();
+  dynamic intialData();
 }
 
 class FavoriteProductDetailsControllerImp

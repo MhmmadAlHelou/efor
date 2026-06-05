@@ -13,7 +13,7 @@ class AddressViewController extends GetxController {
 
   MyServices myServices = Get.find();
 
-  getData() async {
+  dynamic getData() async {
     statusRequest = StatusRequest.loading;
     var response = await addressData
         .getData(myServices.sharedPreferences.getString('id')!);
@@ -33,7 +33,7 @@ class AddressViewController extends GetxController {
     update();
   }
 
-  deleteData(String addressid) {
+  void deleteData(String addressid) {
     addressData.deleteData(addressid);
     data.removeWhere((element) => element.addressId.toString() == addressid);
     update();

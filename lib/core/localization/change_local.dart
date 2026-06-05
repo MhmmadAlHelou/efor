@@ -13,7 +13,7 @@ class LocaleController extends GetxController {
 
   ThemeData appTheme = themeEnglish;
 
-  changeLang(String langCode) {
+  void changeLang(String langCode) {
     Locale locale = Locale(langCode);
 
     myServices.sharedPreferences.setString('lang', langCode);
@@ -23,7 +23,7 @@ class LocaleController extends GetxController {
     Get.updateLocale(locale);
   }
 
-  requestPerLocation() async {
+  dynamic requestPerLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
     serviceEnabled = await Geolocator.isLocationServiceEnabled();

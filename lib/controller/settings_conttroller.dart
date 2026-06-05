@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class SettingsConttroller extends GetxController {
   MyServices myServices = Get.find();
-  logout() {
+  void logout() {
     Get.defaultDialog(
       title: 'Attention!',
       middleText: 'Are you sure you want to Logout!',

@@ -46,7 +46,7 @@ class OrdersPendingController extends GetxController {
     }
   }
 
-  getOrders() async {
+  dynamic getOrders() async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
@@ -65,7 +65,7 @@ class OrdersPendingController extends GetxController {
     update();
   }
 
-  deleteOrders(String orderid) {
+  void deleteOrders(String orderid) {
     Get.defaultDialog(
       title: 'Attention!',
       middleText: 'Are you sure you want to Delete the order!',
@@ -90,7 +90,7 @@ class OrdersPendingController extends GetxController {
     );
   }
 
-  refreshOrder() {
+  void refreshOrder() {
     getOrders();
   }
 

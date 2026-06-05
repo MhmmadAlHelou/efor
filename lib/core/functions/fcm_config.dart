@@ -3,7 +3,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 import 'package:get/get.dart';
 
-requestPermissionNotification() async {
+dynamic requestPermissionNotification() async {
   // NotificationSettings settings =
   await FirebaseMessaging.instance.requestPermission(
     alert: true,
@@ -16,7 +16,7 @@ requestPermissionNotification() async {
   );
 }
 
-fcmConfig() {
+void fcmConfig() {
   FirebaseMessaging.onMessage.listen(
     (message) {
       print("============== Notification =============");
@@ -29,7 +29,7 @@ fcmConfig() {
   );
 }
 
-refreshPageNotification(data) {
+void refreshPageNotification(dynamic data) {
   print('======== page ID =======');
   print(data['pageid']);
   print('======== page Name =======');

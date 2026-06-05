@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class ItemsController extends SearchMixController {
-  intialData();
-  changeCat(int i, int catval);
-  getItems(int categoryId);
-  goToProductDetails(ItemsModel itemsModel);
+  dynamic intialData();
+  dynamic changeCat(int i, int catval);
+  dynamic getItems(int categoryId);
+  dynamic goToProductDetails(ItemsModel itemsModel);
 }
 
 class ItemsControllerImp extends ItemsController {

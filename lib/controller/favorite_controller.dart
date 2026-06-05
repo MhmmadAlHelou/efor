@@ -15,12 +15,12 @@ class FavoriteContoller extends GetxController {
   List data = [];
   late StatusRequest statusRequest;
 
-  setFavorite(id, val) {
+  void setFavorite(dynamic id, dynamic val) {
     isFavorite[id] = val;
     update();
   }
 
-  addFavorite(String itemsId) async {
+  dynamic addFavorite(String itemsId) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     var response = await favoriteData.addFavorite(
@@ -37,7 +37,7 @@ class FavoriteContoller extends GetxController {
     }
   }
 
-  removeFavorite(String itemsId) async {
+  dynamic removeFavorite(String itemsId) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     var response = await favoriteData.removeFavorite(

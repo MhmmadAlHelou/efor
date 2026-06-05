@@ -30,11 +30,17 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                 const Spacer(),
                 // Text(ordersModel.ordersDatetime!),
                 Text(
-                  Jiffy(ordersModel.ordersDatetime!, 'yyyy-MM-dd').fromNow(),
+                  Jiffy.parse(ordersModel.ordersDatetime!).fromNow(),
                   style: const TextStyle(
                       color: AppColor.primaryColor,
                       fontWeight: FontWeight.bold),
                 ),
+                // Text(
+                //   Jiffy(ordersModel.ordersDatetime!, 'yyyy-MM-dd').fromNow(),
+                //   style: const TextStyle(
+                //       color: AppColor.primaryColor,
+                //       fontWeight: FontWeight.bold),
+                // ),
               ],
             ),
             const Divider(),

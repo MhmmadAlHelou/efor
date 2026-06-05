@@ -12,7 +12,7 @@ class NotificationController extends GetxController {
 
   MyServices myServices = Get.find();
 
-  getData() async {
+  dynamic getData() async {
     statusRequest = StatusRequest.loading;
     var response = await notificationData
         .getData(myServices.sharedPreferences.getString('id')!);

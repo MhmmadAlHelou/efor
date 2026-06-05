@@ -45,7 +45,7 @@ class DeliveryOrdersPendingController extends GetxController {
     }
   }
 
-  getOrders() async {
+  dynamic getOrders() async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
@@ -64,7 +64,7 @@ class DeliveryOrdersPendingController extends GetxController {
     update();
   }
 
-  approveOrders(String userid, String orderid) async {
+  dynamic approveOrders(String userid, String orderid) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
@@ -85,7 +85,7 @@ class DeliveryOrdersPendingController extends GetxController {
     update();
   }
 
-  refreshOrder() {
+  void refreshOrder() {
     getOrders();
   }
 

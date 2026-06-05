@@ -12,7 +12,7 @@ class OffersController extends SearchMixController {
 
   List<ItemsModel> data = [];
 
-  getData() async {
+  dynamic getData() async {
     statusRequest = StatusRequest.loading;
     var response = await offersData.getData();
     print("===================connn $response");
@@ -28,7 +28,7 @@ class OffersController extends SearchMixController {
     update();
   }
 
-  goToProductDetails(itemsModel) {
+  void goToProductDetails(dynamic itemsModel) {
     Get.toNamed('productdetails', arguments: {'itemsmodel': itemsModel});
   }
 
